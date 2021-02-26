@@ -1,6 +1,9 @@
 from heavymodel import Model
 
 class TermAssurance(Model):
+    def t(self, t):
+        return t
+
     def net_cf(self, t):
         return self.premiums(t) - self.claims(t) - self.expenses(t)
     
@@ -39,7 +42,10 @@ class TermAssurance(Model):
         return self.claim_pp(t) * self.num_deaths(t)
       
     def expenses(self, t):
-       return self.num_pols_if(t) * self.expense_pp/12 * self.inflation_factor(t)
+        if t == 0:
+            return self.initial_expense
+        else:
+            return self.num_pols_if(t) * self.expense_pp/12 * self.inflation_factor(t)
       
     def num_pols_if(self, t):
         """number of policies in force"""

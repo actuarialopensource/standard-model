@@ -5,16 +5,17 @@ metadata:
     
 assumptions:
     cost_inflation_pa: 0.02
+    initial_expense: 500
     expense_pp: 10
     mort_qx_non_smoker:
         type: mortality_table
-        filename: models/tables/qx_non_smoker.csv
+        filename: models/tables/qx_non_smoker_generic.csv
         select_period: 5
         pc_of_base: 1
 
     mort_qx_smoker:
         type: mortality_table
-        filename: models/tables/qx_smoker.csv
+        filename: models/tables/qx_non_smoker_generic.csv
         select_period: 5
         pc_of_base: 2   # being lazy here!
     
