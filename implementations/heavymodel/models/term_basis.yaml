@@ -1,0 +1,30 @@
+metadata:
+    version: v1
+    author: Lewis Fogden
+
+    
+assumptions:
+    cost_inflation_pa: 0.02
+    initial_expense: 500
+    expense_pp: 10
+    mort_qx_non_smoker:
+        type: mortality_table
+        filename: models/tables/qx_non_smoker_generic.csv
+        select_period: 5
+        pc_of_base: 1
+
+    mort_qx_smoker:
+        type: mortality_table
+        filename: models/tables/qx_non_smoker_generic.csv
+        select_period: 5
+        pc_of_base: 2   # being lazy here!
+    
+    rfr:
+        type: yield_curve
+        filename: models/tables/uk_zero_spot.csv
+        key_period: annual
+    
+    lapse_rate_pa: 0.1
+        
+parameters:
+    debug: 0
