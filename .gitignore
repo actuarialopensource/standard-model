@@ -1,2 +1,4 @@
-
+__pycache__/
 implementations/heavymodel/.vscode/settings.json
+.idea/
+.ipynb_checkpoints

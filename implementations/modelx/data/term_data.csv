@@ -1,0 +1,4 @@
+﻿point_id,sum_assured,age_at_entry,term_y,smoker_status,shape,annual_premium,init_pols_if,extra_mortality,sex
+1,100000,49,30,S,level,1,1,0,F
+2,500000,35,25,N,decreasing,1,1,0,M
+3,10000,66,10,N,level,1,1,0,F
